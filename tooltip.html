@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tooltip</title>
+  <style>
+    body {
+      padding: 2rem;
+      font-family: sans-serif;
+    }
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .tooltip-text {
+      visibility: hidden;
+      background-color: #334155;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 0.5rem;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%; /* show above */
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .tooltip:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <p>
+    Hover over this 
+    <span class="tooltip">word
+      <span class="tooltip-text">This is a tooltip!</span>
+    </span> 
+    to see more.
+  </p>
+
+</body>
+</html>

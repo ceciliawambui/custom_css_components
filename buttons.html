@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <style>
+        body {
+            padding: 2rem;
+        }
+
+        button {
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-right: 1rem;
+            cursor: pointer;
+            border: none;
+        }
+
+        .primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .outline {
+            background: transparent;
+            border: 2px solid green;
+            color: green;
+        }
+
+        .ghost {
+            background: transparent;
+            color: skyblue;
+        }
+
+        .danger {
+            background: #ef4444;
+            color: white;
+        }
+
+        .primary:hover {
+            background: darkblue;
+        }
+
+        .outline:hover {
+            background: green;
+            color: white;
+        }
+
+        .ghost:hover {
+            background: #f0f9ff;
+        }
+
+        .danger:hover {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="primary">Primary</button>
+    <button class="outline">Outline</button>
+    <button class="ghost">Ghost</button>
+    <button class="danger">Danger</button>
+
+</body>
+
+</html>

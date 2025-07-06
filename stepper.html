@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stepper</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+
+    .stepper {
+      display: flex;
+      justify-content: space-between;
+      max-width: 600px;
+      margin: auto;
+      position: relative;
+    }
+
+    .step {
+      text-align: center;
+      position: relative;
+      flex: 1;
+    }
+
+    .step::before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: -50%;
+      height: 2px;
+      width: 100%;
+      background: #cbd5e1;
+      z-index: -1;
+    }
+
+    .step:first-child::before {
+      display: none;
+    }
+
+    .step-circle {
+      background: #e2e8f0;
+      color: #1e293b;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      font-weight: bold;
+    }
+
+    .step.active .step-circle {
+      background: #2563eb;
+      color: white;
+    }
+
+    .step p {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stepper">
+    <div class="step active">
+      <div class="step-circle">1</div>
+      <p>Account</p>
+    </div>
+    <div class="step active">
+      <div class="step-circle">2</div>
+      <p>Details</p>
+    </div>
+    <div class="step">
+      <div class="step-circle">3</div>
+      <p>Finish</p>
+    </div>
+  </div>
+
+</body>
+</html>

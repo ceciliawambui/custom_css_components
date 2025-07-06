@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Breadcrumb</title>
+  <style>
+    body {
+      padding: 2rem;
+      font-family: sans-serif;
+    }
+
+    .breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 0.5rem;
+    }
+
+    .breadcrumb li {
+      color: #6b7280;
+    }
+
+    .breadcrumb li::after {
+      content: "/";
+      margin-left: 0.5rem;
+      color: #9ca3af;
+    }
+
+    .breadcrumb li:last-child::after {
+      content: "";
+    }
+
+    .breadcrumb a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <ul class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Library</a></li>
+    <li><a href="#">Data</a></li>
+    <li>Reports</li>
+  </ul>
+
+</body>
+</html>
